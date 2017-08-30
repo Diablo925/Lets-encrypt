@@ -1,4 +1,9 @@
 <?php
+/**
+	* Corn file for Let_Encrypt module for sentora version 1.0.3
+	* Version : 100
+	* Author  : Diablo925
+*/
 if(PHP_SAPI != 'cli') {
 echo "only from command line";
 exit;
@@ -23,7 +28,6 @@ exit;
 					$implodedomain = implode(', ', $files);
 							foreach ($files as $value) {
 								$rootdir = str_replace('.', '_', $value);
-								//$items = ctrl_options::GetSystemOption('hosted_dir') . $u . "/Public_html/".$rootdir."";
 								//begin to see if cert need to get updatet
 								if (time() > Certvalid("$dir"."$value"."/cert.pem")) {
 									$le = new Analogic\ACME\Lescript($dir,ctrl_options::GetSystemOption('hosted_dir') . $u . "/public_html/$rootdir");

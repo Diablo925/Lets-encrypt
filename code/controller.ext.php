@@ -143,7 +143,10 @@ class module_controller extends ctrl_module
 					$sql->bindParam(':port', $port);
 					$sql->bindParam(':portforward', $portforward);
 					$sql->execute();
+
+					//Examine if cron script exists
 					if (fs_director::CheckForEmptyValue(self::CheckCronForErrors())) {
+					// if it not found it will make it
 					$script = "Cron.php";
 					$desc = "Made by Let´s Encrypt";
 					$timing = "0 0 * * *";
@@ -158,9 +161,7 @@ class module_controller extends ctrl_module
 					"description" => $desc));
 					self::WriteCronFile();
 				}
-
 					self::SetWriteApacheConfigTrue();
-
 					return true;
 		}
 
