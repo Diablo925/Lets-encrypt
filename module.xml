@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<module>
+    <name>Let´s Encrypt</name>
+    <version>100</version>
+    <defaultcat>Domain Management</defaultcat>
+    <desc>Add Let´s Encrypt certificates to your domain</desc>
+    <authorname>Diablo925</authorname>
+    <authoremail>carsten@alio.dk</authoremail>
+    <authorurl>http://Alio.dk/</authorurl>
+    <updateurl></updateurl>
+</module>

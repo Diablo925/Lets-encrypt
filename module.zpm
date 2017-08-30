@@ -1,0 +1,31 @@
+<div class="zmodule_content panel" id="zmodule_header_<@ ModuleName @>">
+    <div class="panel-heading">
+        <img src="<@ ModuleIcon @>" width="35" height="35" border="0" alt="<@ ModuleName @>">
+
+        <div class="zmodule_title">
+            <@ ModuleName @>
+        </div>
+
+        <div class="zmodule_desc" id="zmodule_desc_<@ ModuleName @>"><@ ModuleDesc @></div>
+		
+    </div>
+	
+	<@ Result @>
+	
+	<div class="zgrid_wrapper">
+		<table class="table">
+			<% loop List_of_domains %>
+				<tr>
+					<td>
+						<& Domain &>
+					</td>
+					<td>
+						<& Days &>
+					</td> 
+					<td>
+						<& Button &>
+					</td>
+				</tr>
+			<% endloop %>
+		</table>
+</div>
